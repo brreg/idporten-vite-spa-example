@@ -1,11 +1,27 @@
 import "./App.css"
-import logo from "./logo.svg"
+import { Routes, Route } from 'react-router-dom';
+import { AuthGuard } from './components/AuthGuard';
+import HomePage from "./pages";
+import UserPage from "./pages/user";
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Hello world</h1>
-    </div>
+    <main>
+      <Routes>
+        <Route
+          path='/'
+          element={<HomePage />}
+        />
+        <Route
+          path='/user'
+          element={
+            <AuthGuard>
+              <UserPage />
+            </AuthGuard>
+          }
+        />
+      </Routes>
+    </main>
   )
 }
 
