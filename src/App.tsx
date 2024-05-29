@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { AuthGuard } from './components/AuthGuard';
 import HomePage from "./pages";
 import UserPage from "./pages/user";
+import LpidPage from "./pages/lpid";
 
 const App = () => {
   return (
@@ -17,6 +18,14 @@ const App = () => {
           element={
             <AuthGuard>
               <UserPage />
+            </AuthGuard>
+          }
+        />
+        <Route
+          path='/lpid'
+          element={
+            <AuthGuard>
+              <LpidPage />
             </AuthGuard>
           }
         />
