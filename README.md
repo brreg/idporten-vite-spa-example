@@ -7,6 +7,8 @@ If the user tries to go directly to the privilege page `/user`, the user is redi
 
 This application is using pattern described in https://docs.digdir.no/docs/idporten/oidc/oidc_auth_spa.html
 
+This application is the frontend of a complete example on how a website can use Altinn skjema via its API endpoints. The backend application is located [here](https://github.com/brreg/altinn-skjema-api-example)
+
 # Risk
 Use at your own risk!
 
